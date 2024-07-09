@@ -28,7 +28,7 @@ const Slider = () => {
   }, [imageCurrentIndex]);
 
   return (
-    <div className="relative">
+    <div id="home" className="relative">
       <img className="w-full" src={imageUrls[imageCurrentIndex]}></img>
       <div className="absolute bottom-0 left-0 right-0 text-center py-8">
         <h2 className="text-white text-[22px] tracking-[0.5px]">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,11 +31,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>
+      <body className={`${lato.className} flex flex-col w-full`}>
         <link rel="icon" href="https://www.w3schools.com/favicon.ico" />
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </Head>
         {children}
       </body>
     </html>

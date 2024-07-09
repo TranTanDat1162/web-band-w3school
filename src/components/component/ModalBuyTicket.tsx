@@ -18,12 +18,19 @@ const ModalBuyTicket = (props: Iprops) => {
   if (!props.isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[50] flex justify-center bg-gray-800 bg-opacity-50 overflow-auto pt-[100px]">
+    <div className="fixed inset-0 z-50 flex justify-center bg-gray-800 bg-opacity-50 overflow-auto pt-[100px]">
+      {/* //^This is the backdrop that will close the modal when clicked on outside the modal
+       // Notice the z-40 is lower than z-50 to ensure that the backdrop is behind the modal  */}
       <div
-        className={`bg-[#009688] shadow-lg overflow-auto w-[52%] h-[65%] ${
+        onClick={props.onClose}
+        className="fixed top-0 left-0 w-[100%] h-[100%] z-40"
+      ></div>
+
+      {/* //^This is the modal itself */}
+      <div
+        className={`bg-[#009688] shadow-lg overflow-auto h-[500px] md:w-[55vw] md:h-[60vh] z-[50] ${
           props.isOpen ? "animate-slideDown" : ""
         }`}
-        onClick={props.onClose}
       >
         <header className="h-[27%] shadow-lg">
           <button
@@ -41,7 +48,7 @@ const ModalBuyTicket = (props: Iprops) => {
           </h1>
         </header>
         <div className="bg-white h-[73%] px-4 py-4">
-          {/* Change from div to form whenever submit something */}
+          {/* Change from div tag to form tag whenever submit something */}
           <div className="w-full">
             <p className="float-left mb-4">
               <label className="text-[15px]">

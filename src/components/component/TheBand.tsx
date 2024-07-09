@@ -2,11 +2,11 @@ import React from "react";
 
 const TheBand = () => {
   return (
-    <div className="text-center py-16 px-4 max-w-[800px] mx-auto">
+    <div id="band" className="text-center py-16 px-4 max-w-[800px] mx-auto">
       <h1 className="uppercase tracking-[3px] font-[400] text-[30px] my-[10px]">
         the band
       </h1>
-      <p className="my-[15px] text-[15px] italic opacity-[0.7]">
+      <p className="my-[15px] text-[15px] italic opacity-[0.6] tracking-[0.5px]">
         We love music
       </p>
       <p className="my-[15px] text-[15px] text-justify">
@@ -22,7 +22,7 @@ const TheBand = () => {
         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
 
-      <div className="py-8 float-left flex">
+      <div className="py-8 block md:flex">
         <div className="">
           <p className="my-[15px]">Name</p>
           <img

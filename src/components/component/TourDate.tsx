@@ -14,11 +14,11 @@ const TourDate = () => {
   };
 
   return (
-    <div className="text-center py-16 px-4 bg-black">
+    <div id="tour" className="text-center py-16 px-4 bg-black">
       <h1 className="uppercase tracking-[3px] font-[400] text-[30px] my-[10px] text-white">
         tour dates
       </h1>
-      <p className="my-[15px] text-[15px] italic opacity-[0.7] text-white">
+      <p className="my-[15px] text-[15px] italic opacity-[0.6] tracking-[0.5px] text-white">
         Remember to book your tickets!
       </p>
 
@@ -43,10 +43,10 @@ const TourDate = () => {
         </li>
       </ul>
 
-      <div className="flex text-white max-w-[800px] mx-auto py-8">
-        <div className="bg-white text-black w-[calc(100%/3)] mr-4">
+      <div className="block md:flex text-white max-w-[800px] mx-auto py-8">
+        <div className="bg-white text-black w-full md:w-[calc(100%/3)] mr-4">
           <img
-            className="hover:opacity-60"
+            className="hover:opacity-60 w-full"
             src="https://www.w3schools.com/w3images/newyork.jpg"
             alt="New York"
           />
@@ -69,9 +69,9 @@ const TourDate = () => {
             <ModalBuyTicket isOpen={isOpen} onClose={handleCloseModal} />
           )}
         </div>
-        <div className="bg-white text-black w-[calc(100%/3)] mr-4">
+        <div className="bg-white text-black w-full md:w-[calc(100%/3)] mr-4 mt-4 md:mt-auto">
           <img
-            className="hover:opacity-60"
+            className="hover:opacity-60 w-full"
             src="https://www.w3schools.com/w3images/paris.jpg"
             alt="Paris"
           />
@@ -89,9 +89,9 @@ const TourDate = () => {
             </button>
           </div>
         </div>
-        <div className="bg-white text-black w-[calc(100%/3)]">
+        <div className="bg-white text-black w-full md:w-[calc(100%/3)] mt-4 md:mt-auto">
           <img
-            className="hover:opacity-60"
+            className="hover:opacity-60 w-full"
             src="https://www.w3schools.com/w3images/sanfran.jpg"
             alt="San Francisco"
           />
@@ -112,6 +112,7 @@ const TourDate = () => {
           </div>
         </div>
       </div>
+      <div className="clear-both"></div>
     </div>
   );
 };
