@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import React from "react";
 
 // contact.page.tsx
-const page = () => {
+const ContactPage = () => {
   const searchParam = useSearchParams();
   const name = searchParam.get("name");
   const email = searchParam.get("email");
@@ -31,4 +31,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactPage;
